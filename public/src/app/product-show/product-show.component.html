@@ -1,0 +1,23 @@
+
+<fieldset>
+  <h1>Product Details</h1>
+  <table>
+    <tr>
+      <th><em>Name:</em></th>
+      <td>{{ productDetail.name }}</td>
+    </tr>
+    <tr>
+      <th><em>Qty: </em></th>
+      <td>{{ productDetail.qty }}</td>
+    </tr>
+    <tr>
+      <th><em>Price: </em></th>
+      <td>${{ productDetail.price }}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><button class="back" [routerLink]="['/products']">BACK</button> 
+        <button class="delete" (click)="deleteProduct(productDetail._id)">DELETE</button></td>
+    </tr>
+  </table>
+</fieldset>

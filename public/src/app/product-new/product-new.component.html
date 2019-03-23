@@ -1,0 +1,30 @@
+
+<fieldset>
+  
+  <h1>New Product</h1>
+  <form (submit)="onSubmit()">
+    <table>
+        <tr>
+          <th><em>Name:</em></th>
+          <td><input type="text" name="name" [(ngModel)]="newProduct.name">
+            <p *ngIf="newProduct.name < 3">Please enter a name longer than 3 characters.</p>
+          </td>
+        </tr>
+        <tr>
+          <th><em>Qty: </em></th>
+          <td><input type="text" name="qty" [(ngModel)]="newProduct.qty">
+            <p *ngIf="newProduct.qty < 0">Please enter a quantity greater than 0.</p>
+          </td>
+        </tr>
+        <tr>
+          <th><em>Price: </em></th>
+          <td><input type="text" name="price" [(ngModel)]="newProduct.price">
+            <p *ngIf="newProduct.price < 0">Please enter a price greater than 0.</p>
+          </td>
+        </tr>
+    </table>
+    <button class="cancel" [routerLink]="['/products']">CANCEL</button>
+    <button class="create" type="submit" ng-disabled=!vm.form.$valid>CREATE</button> 
+  </form>
+  
+</fieldset>

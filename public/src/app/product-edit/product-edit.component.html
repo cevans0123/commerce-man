@@ -1,0 +1,24 @@
+
+<fieldset>
+  <h1>Update Product</h1>
+  <form (submit)="onEdit()">
+      <table>
+          <tr>
+            <th><em>Name:</em></th>
+            <td><input type="text" name="name" [(ngModel)]="productEdit.name"></td>
+              <p *ngIf="productEdit.name < 3">Please enter a name longer than 3 characters.</p>
+          </tr>
+          <tr>
+            <th><em>Qty: </em></th>
+            <td><input type="text" name="qty" [(ngModel)]="productEdit.qty"></td>
+              <p *ngIf="productEdit.qty < 0">Please enter a quantity greater than 0.</p>
+          </tr>
+          <tr>
+            <th><em>Price: </em></th>
+            <td><input type="text" name="price" [(ngModel)]="productEdit.price"></td>
+              <p *ngIf="productEdit.price < 0">Please enter a price greater than 0.</p>
+          </tr>
+      </table>
+      <button class="cancel" [routerLink]="['/products']">CANCEL</button>
+      <button class="update" type="submit">UPDATE</button> 
+    </form>

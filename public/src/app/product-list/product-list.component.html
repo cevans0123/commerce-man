@@ -1,0 +1,22 @@
+
+<fieldset>
+  <h1>Product List</h1>
+  <button class="add" [routerLink]="['/products', 'new']">Add New Product</button>
+
+  <table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+    <tr *ngFor="let product of products">
+        <td>{{ product._id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.qty }}</td>
+        <td>${{ product.price }}</td>
+        <td><button class="edit" [routerLink]="['/products', product._id, 'edit']">Edit</button> <button class="detail" [routerLink]="['/products', product._id]">Details</button></td> 
+    </tr>
+  </table>
+</fieldset>  

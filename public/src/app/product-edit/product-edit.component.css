@@ -1,0 +1,42 @@
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+table {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    padding: 10px;
+}
+th, td {
+    padding:10px;
+}
+button {
+    height: 30px;
+    width: 150px;
+    color:white;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: medium;
+}
+button a{
+    color:white;
+}
+button:hover {
+    border: 2px solid black;
+}
+.update {
+    background-color:rgba(44, 155, 44, 0.575);
+}
+.cancel {
+    background-color:rgba(185, 56, 56, 0.575);
+}
+p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;  
+}
+fieldset {
+    padding: 25px;
+}
+input {
+    border: 1px solid darkgrey;
+    
+}
